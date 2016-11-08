@@ -1,0 +1,27 @@
+uuid: 22f7f65d-9acf-4377-9372-1fa345a4d61f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.job.field_closing_date
+    - field.field.node.job.field_description
+    - field.field.node.job.field_employer
+    - field.field.node.job.field_job_reference_number
+    - field.field.node.job.field_original_job_link
+    - node.type.job
+  module:
+    - user
+id: node.job.teaser
+targetEntityType: node
+bundle: job
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_closing_date: true
+  field_description: true
+  field_employer: true
+  field_job_reference_number: true
+  field_original_job_link: true
