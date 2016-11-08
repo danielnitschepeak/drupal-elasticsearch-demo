@@ -314,3 +314,5 @@ selenium_version: 2.53.0
 dashboard_install_dir: /var/www/dashboard
 known_hosts_path: ~/.ssh/known_hosts
 #ssh_home: "{{ drupal_core_path }}"
+elasticsearch_network_host: 0.0.00
+elasticsearch_http_port: 9200
