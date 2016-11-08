@@ -45,7 +45,6 @@ class SearchController extends ControllerBase {
           'match' => [
             '_all' => [
               'query' => $_GET['query'],
-              'fuzziness' => 4,
             ],
           ],
         ],
