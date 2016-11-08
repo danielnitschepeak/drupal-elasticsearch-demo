@@ -60,7 +60,7 @@ class SearchController extends ControllerBase {
     $jobs = $client->search([
       'index' => 'jobs',
       'type' => 'job',
-      'from' => 1,
+      'from' => 0,
       'size' => 1000,
       'body' => $query,
     ]);
