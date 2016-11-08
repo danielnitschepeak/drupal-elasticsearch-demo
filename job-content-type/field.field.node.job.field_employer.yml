@@ -1,0 +1,19 @@
+uuid: 1247b20b-d1cb-400b-9848-7f90eee027f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_employer
+    - node.type.job
+id: node.job.field_employer
+field_name: field_employer
+entity_type: node
+bundle: job
+label: Employer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
