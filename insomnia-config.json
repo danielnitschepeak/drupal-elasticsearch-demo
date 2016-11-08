@@ -1,0 +1,213 @@
+{
+  "_type": "export",
+  "__export_format": 2,
+  "__export_date": "2016-11-08T17:11:38.472Z",
+  "__export_source": "insomnia.desktop.app:v3.6.7",
+  "resources": [
+    {
+      "modified": 1478255835273,
+      "created": 1478255723919,
+      "parentId": null,
+      "name": "Insomnia",
+      "_id": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "_type": "workspace"
+    },
+    {
+      "modified": 1478255820333,
+      "created": 1478255728097,
+      "parentId": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "name": "Main environment",
+      "data": {},
+      "_id": "env_d93732c40557461fa1311a9052852cfc",
+      "_type": "environment"
+    },
+    {
+      "modified": 1478624690712,
+      "created": 1478255854045,
+      "parentId": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "name": "Default Jar",
+      "cookies": [],
+      "_id": "jar_61bca83dce2f4edb8906f830f4185e1c",
+      "_type": "cookie_jar"
+    },
+    {
+      "modified": 1478620885820,
+      "created": 1478255980296,
+      "parentId": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "url": "http://drupalvm3.dev:9200/jobs/job/1",
+      "name": "Add job with id",
+      "method": "PUT",
+      "body": "{\n\t\"title\": \"Managing director\",\n\t\"description\": \"For this amazing job, you must be 18 months old or younger with 3 years experience.\",\n\t\"employer\": \"EvilC0rp\"\n}",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_19b397f3d7774a25886d3efd8049d268",
+      "_type": "request"
+    },
+    {
+      "modified": 1478620864772,
+      "created": 1478256291416,
+      "parentId": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "url": "http://drupalvm3.dev:9200/jobs/_search",
+      "name": "Get all jobs",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "_id": "req_1ad3db931f874fe0840e3e44d2bc2381",
+      "_type": "request"
+    },
+    {
+      "modified": 1478620875842,
+      "created": 1478256407065,
+      "parentId": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "url": "http://drupalvm3.dev:9200/jobs",
+      "name": "Delete index",
+      "method": "DELETE",
+      "body": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "_id": "req_305688ccbd27444f8509ff456c07eb8b",
+      "_type": "request"
+    },
+    {
+      "modified": 1478620890794,
+      "created": 1478256630699,
+      "parentId": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "url": "http://drupalvm3.dev:9200/jobs/job",
+      "name": "Add job without id",
+      "method": "POST",
+      "body": "{\n\t\"title\": \"CEO\",\n\t\"description\": \"For this amazing job, you must be 18 months old or younger with 5 years experience.\",\n\t\"employer\": \"EvilC0rp\"\n}",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_3e46dec0fc5a43cfab34c57049e90304",
+      "_type": "request"
+    },
+    {
+      "modified": 1478620945376,
+      "created": 1478274456428,
+      "parentId": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "url": "http://drupalvm3.dev:9200/jobs/_search",
+      "name": "Get jobs closing soon",
+      "method": "GET",
+      "body": "{ \n\t\"query\": {\n\t\t\"range\": {\n\t\t\t\"closing_date\": {\n\t\t\t\t\"lte\": \"2016-11-10\"\n\t\t\t}\n\t\t}\n\t}\n}",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_69f6204fadb64c6ea25507403d7a3bb4",
+      "_type": "request"
+    },
+    {
+      "modified": 1478620954160,
+      "created": 1478590210949,
+      "parentId": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "url": "http://drupalvm3.dev:9200/jobs/_search",
+      "name": "Get jobs grouped by employer",
+      "method": "GET",
+      "body": "{\n\t\"size\": 0,\n\t\"aggregations\": {\n\t\t\"employer\": {\n\t\t\t\"terms\": {\n\t\t\t\t\"field\": \"employer\"\n\t\t\t}\n\t\t}\n\t}\n}\n\t\t\t",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_6ac7b9d83fe148c2873b9254996044df",
+      "_type": "request"
+    },
+    {
+      "modified": 1478620845079,
+      "created": 1478256513759,
+      "parentId": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "url": "http://drupalvm3.dev:9200/jobs",
+      "name": "Add index",
+      "method": "PUT",
+      "body": "{\n\t\"settings\": {\n\t\t\"index\": {\n\t\t\t\"analysis\" :{\n\t\t\t\t\"analyzer\": {\n\t\t\t\t\t\"default\": {\n\t\t\t\t\t\t\"type\" : \"snowball\",\n\t\t\t\t\t\t\"language\" : \"English\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}  \n\t\t}\n\t},\n\t\"mappings\": {\n\t\t\"job\": {\n\t\t\t\"properties\": {\n\t\t\t\t\"employer\": {\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"index\": \"not_analyzed\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "_id": "req_807a1e17c77e4b4bab5910939b0ab131",
+      "_type": "request"
+    },
+    {
+      "modified": 1478620951140,
+      "created": 1478275795367,
+      "parentId": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "url": "http://drupalvm3.dev:9200/jobs/_search",
+      "name": "Get drupal jobs",
+      "method": "GET",
+      "body": "{ \n\t\"query\": {\t\n\t\t\"match\": {\n\t\t\t\"_all\": \"drupal\"\n\t\t}\n\t},\n\t\"highlight\" : {\n    \t\"fields\" : {\n      \t\t\"*\" : {}\n    \t}\n  \t}\t\n}",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_8a96fcc3b21d488db4b7ccdb0c1c1bcf",
+      "_type": "request"
+    },
+    {
+      "modified": 1478275872004,
+      "created": 1478275859915,
+      "parentId": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "url": "",
+      "name": "Get css jobs",
+      "method": "GET",
+      "body": "{ \n\t\"query\": {\t\n\t\t\"match\": {\n\t\t\t\"description\": \"css\"\n\t\t}\n\t}\n}",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "_id": "req_d0ca3f6fac8444f39b432cac5b352e94",
+      "_type": "request"
+    },
+    {
+      "modified": 1478620894296,
+      "created": 1478256224872,
+      "parentId": "wrk_578065c7e6e4433dac2fcf6c313bb5e3",
+      "url": "http://drupalvm3.dev:9200/jobs/job/1",
+      "name": "Get single job",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "_id": "req_dafee67b3a1140b9840c905cbe2ba16f",
+      "_type": "request"
+    },
+    {
+      "modified": 1478255829808,
+      "created": 1478255821368,
+      "parentId": "env_d93732c40557461fa1311a9052852cfc",
+      "name": "drupalvm.dev elasticsearch",
+      "data": {},
+      "_id": "env_eea71257954a4c84945831a4e60955ec",
+      "_type": "environment"
+    }
+  ]
+}
