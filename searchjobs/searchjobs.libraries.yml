@@ -1,0 +1,5 @@
+searchjobs:
+  version: 1.x
+  css:
+    base:
+      css/searchResults.css: {}

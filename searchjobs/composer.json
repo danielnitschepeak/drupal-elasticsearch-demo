@@ -1,0 +1,14 @@
+{
+  "name": "drupal/searchjobs",
+  "type": "drupal-module",
+  "description": "Search elasticsearch for jobs",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/searchjobs",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/searchjobs",
+    "source": "http://cgit.drupalcode.org/searchjobs"
+  },
+  "require": { }
+}

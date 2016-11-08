@@ -1,0 +1,5 @@
+name: SearchJobs
+type: module
+description: Search elasticsearch for jobs
+core: 8.x
+package: Custom

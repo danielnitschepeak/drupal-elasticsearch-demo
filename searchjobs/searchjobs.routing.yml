@@ -1,0 +1,8 @@
+
+searchjobs.search_controller_search:
+  path: '/searchjobs'
+  defaults:
+    _controller: '\Drupal\searchjobs\Controller\SearchController::search'
+    _title: 'search'
+  requirements:
+    _permission: 'access content'

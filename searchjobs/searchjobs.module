@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains searchjobs.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function searchjobs_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the searchjobs module.
+    case 'help.page.searchjobs':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Search elasticsearch for jobs') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function searchjobs_theme() {
+  return [
+    'searchResults' => [
+      'variables' => [
+        'searchResults' => NULL,
+      ],
+      'template' => 'searchResults',
+    ],
+  ];
+}
