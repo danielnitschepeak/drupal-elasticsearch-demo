@@ -1,10 +1,9 @@
 ````
-# Add job content type
 # Install vagrant: https://www.vagrantup.com/downloads.html
 # Install Virtualbox: https://www.virtualbox.org/wiki/Downloads
-git clone https://github.com/geerlingguy/drupal-vm.git ~/Projects/drupal-vm-2
+git clone https://github.com/geerlingguy/drupal-vm.git ~/Projects/drupal-vm-3
 git clone https://github.com/danielnitschepeak/drupal-elasticsearch-demo.git
-cd drupal-vm-2
+cd drupal-vm-3
 cp ../drupal-elasticsearch-demo/config.yml .
 diff config.yml default.config.yml
 vagrant up
@@ -20,12 +19,12 @@ cd web
 drupal generate:module --module=ImportJobs --description='Parse and import jobs into Drupal'
 drupal module:install importjobs
 drupal generate:command --module=importjobs --name=importjobs --class=ImportJobsCommand --container-aware
-cd ../; composer require "thiagoalessio/tesseract_ocr"; sudo apt-get install tesseract-ocr
+cd ../; composer require "thiagoalessio/tesseract_ocr"; sudo apt-get install tesseract-ocr; cd web
 cp ../drupal-elasticsearch-demo/ImportJobsCommand.php drupal/web/modules/custom/importjobs/src/Command/
 drupal importjobs ../../tj/jobs
 
 # Index jobs
-# elasticsearch demo with insomnia + explanation
+# Install insomnia: https://insomnia.rest/download or postman: https://www.getpostman.com/apps
 # Run Drupal cron for drupal search
 cd ..; composer require elasticsearch/elasticsearch; cd web
 drupal generate:module --module=IndexJobs --description='Add jobs to elasticsearch'
@@ -62,3 +61,4 @@ open https://www.wikipedia.org/
 
 # questions?
 ````
+
