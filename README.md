@@ -24,8 +24,8 @@ cp ../drupal-elasticsearch-demo/ImportJobsCommand.php drupal/web/modules/custom/
 drupal importjobs ../../tj/jobs
 
 # Index jobs
+# Elasticsearch/Drupal presentation: https://youtu.be/BySItbj_U64?t=1755
 # Install insomnia: https://insomnia.rest/download or postman: https://www.getpostman.com/apps
-# Run Drupal cron for drupal search
 cd ..; composer require elasticsearch/elasticsearch; cd web
 drupal generate:module --module=IndexJobs --description='Add jobs to elasticsearch'
 drupal module:install indexjobs
